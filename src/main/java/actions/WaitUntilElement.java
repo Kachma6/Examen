@@ -10,7 +10,7 @@ import ui.CheckBoxes;
 public class WaitUntilElement {
     public static boolean isPresent(WebDriver webDriver, By locator){
         try {
-            WebDriverWait wait = new WebDriverWait(webDriver,3);
+            WebDriverWait wait = new WebDriverWait(webDriver,5);
             wait.until(ExpectedConditions.presenceOfElementLocated(locator));
             return true;
         }catch(Exception e){
@@ -20,7 +20,7 @@ public class WaitUntilElement {
     }
     public static boolean isVisible(WebDriver webDriver, By locator){
         try {
-            WebDriverWait wait = new WebDriverWait(webDriver,3);
+            WebDriverWait wait = new WebDriverWait(webDriver,5);
             wait.until(ExpectedConditions.visibilityOf(webDriver.findElement(locator)));
 
             return true;
